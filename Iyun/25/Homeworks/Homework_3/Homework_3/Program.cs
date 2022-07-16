@@ -50,7 +50,7 @@ namespace Homework_3
             Console.WriteLine("-----------------------------------");
 
             Console.WriteLine(city1 + ", " + city2 + ", " + city3 + ", " + city4 + ", " + city5 +
-                ", " + city6 + ", " + city7 + ", " + city8 + ", " + city9 + ", " + city10);
+                ", " + city6 + ", " + city7 + ", " + city8 + ", " + city9 + ", " + city10); 
 
             Console.ReadLine();
 

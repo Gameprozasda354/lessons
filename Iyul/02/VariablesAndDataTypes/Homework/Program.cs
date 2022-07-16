@@ -31,6 +31,11 @@ namespace Homework
 
              Qeyd: mövzuları araşdırarkən bir saytdan və ya qaynaqdan araşdırmayın. Fərqli-fərqli qaynaqlara baxın.
              */
+
+
+
+
+
         }
     }
 }
