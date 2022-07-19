@@ -51,13 +51,14 @@ namespace Homework4
             char default dəyəri ‘\0’-dir
             RAMda 16bit yer tutur deyer araligi minimum: U +0000, maximum:  U +ffff	 deyerini ala bilir.
 
+            //bool hemde boolean adlanir true veya false olur default deyeri false-dur.
 
              */
 
 
             #endregion
 
-            //bool hemde boolean adlanir true veya false olur default deyeri false-dur.
+
 
             #region Reference Data Types
             #region string

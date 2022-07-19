@@ -275,13 +275,12 @@ namespace Homework3
             dynamic gamer3 = "Cned";
             dynamic gamer4 = "Epha";
             dynamic gamer5 = "Bordo";
-            dynamic gamer6 = gamer5 + " ";
-            dynamic gamer7 = gamer6 + gamer4;
+            dynamic gamer6 = gamer5 + " " + gamer4;
             Console.WriteLine(gamer2);
             Console.WriteLine(gamer3);
             Console.WriteLine(gamer4);
             Console.WriteLine(gamer5);
-            Console.WriteLine(gamer7);
+            Console.WriteLine(gamer6);
 
             Console.WriteLine("------------------------------------------------------------------");
 
