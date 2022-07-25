@@ -24,6 +24,13 @@ namespace Homework
                   
                   Əgər istifadəçi müraciət qaydası olaraq bəy/xanım daxil etməsə o zaman birbaşa Orxan neçə yaşınız var? soruşsun.
                   Axırıncı sualdan sonra "Anketə qatıldığınız üçün təşəkkür edirik!" yazsın.
+
+                
+
+
+
+
+
              */
         }
     }
