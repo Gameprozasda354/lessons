@@ -25,11 +25,15 @@ namespace Homework03
             int i = Convert.ToInt32(Console.ReadLine());
             int j = Convert.ToInt32(Console.ReadLine());
 
-            int k = a + b + c + d + e + f + g + h + i + j + 1;
-            int l = a - b - c - d - e - f - g - h - i - j - 1;
-            int m = a * b * c * d * e * f * g * h * i * j * 20;
-            int n = a / b / c / d / e / f / g / h / i / j / 20;
+            int k = a + b + c + d + e + f + g + h + i + j;
+            int l = a - b - c - d - e - f - g - h - i - j;
+            int m = a * b * c * d * e * f * g * h * i * j;
+            int n = a / b / c / d / e / f / g / h / i / j;
 
+            k++;
+            l--;
+            m *= 20;
+            n /= 20;
 
             Console.WriteLine("Nəticə: " + a + " + " + b + " + " + c + " + " + d + " + " + e + " + " + f + " + " + g
                  + " + " + h + " + " + i + " + " + j + " + " + "1" + " = " + k);
