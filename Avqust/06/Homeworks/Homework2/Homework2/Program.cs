@@ -59,7 +59,6 @@ namespace Homework2
                             break;
                     }
                     goto case 1;
-                    break;
                 case 2:
                     Console.WriteLine("Netice" + (a - b));
                     Console.WriteLine("Birinci deyeri daxil edin:");
@@ -92,7 +91,6 @@ namespace Homework2
                             break;
                     }
                     goto case 2;
-                    break;
                 case 3:
                     Console.WriteLine("Netice" + (a * b));
                     Console.WriteLine("Birinci deyeri daxil edin:");
@@ -125,7 +123,6 @@ namespace Homework2
                             break;
                     }
                     goto case 3;
-                    break;
                 case 4:
                     Console.WriteLine("Netice" + (a / b));
                     Console.WriteLine("Birinci deyeri daxil edin:");
@@ -157,7 +154,6 @@ namespace Homework2
                             break;
                     }
                     goto case 4;
-                    break;
             }
 
            
