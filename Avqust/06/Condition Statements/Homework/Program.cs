@@ -17,6 +17,8 @@
              və bölmə. İstifadəçi hansını seçsə həmin case'də ekrana nəticəni çıxardacaqsız. Nəticəni göstərəndən sonra aşağıda yenidən ana menyunu göstərəcəksiz. İstifadəçi
              istədiyi qədər yəni proqramı bağlayana qədər bu döngü halında davam edəcək.
              */
+          
+
         }
     }
 }

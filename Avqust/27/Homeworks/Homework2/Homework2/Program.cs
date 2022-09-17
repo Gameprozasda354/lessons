@@ -10,7 +10,7 @@ namespace Homework2
     {
         static void Main(string[] args)
         {
-            for (int i = 1; i < 13; i++)
+            for (int i = 1; i < 10; i++)
             {
                 for (int b = 0; b < 10; b++)
                 {

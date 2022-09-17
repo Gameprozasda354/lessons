@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4EE6C2EC-807C-4CE1-B7E0-450B115F1F03}</ProjectGuid>
+    <ProjectGuid>{B92DEDF1-50E8-46FC-BADA-83D6FC53820E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>HashTable_SortedList_Stack</RootNamespace>
-    <AssemblyName>HashTable-SortedList-Stack</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <RootNamespace>Homework001</RootNamespace>
+    <AssemblyName>Homework001</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
