@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Homework001
+namespace Homework2
 {
     internal class Program
     {
@@ -111,7 +111,7 @@ namespace Homework001
 
 
 
-
+        StartLanguage:
 
             Console.WriteLine("1.Aze, 2.Eng, 3.Tur");
             int language = Convert.ToInt32(Console.ReadLine());
@@ -197,12 +197,12 @@ namespace Homework001
 
                         Console.WriteLine(selectedLanguage["delete_all"]);
                         var answer = Console.ReadLine();
-                        if (answer.ToUpper() == selectedLanguage["Y"])
+                        if (answer.ToUpper() == (string)selectedLanguage["Y"])
                         {
                             numbers.Clear();
                             Console.WriteLine(selectedLanguage["all_deleted"]);
                         }
-                        if (answer.ToUpper() == selectedLanguage["N"])
+                        if (answer.ToUpper() == (string)selectedLanguage["N"])
                         {
                             Console.WriteLine(selectedLanguage["delete_element"]);
                             var count4 = Console.ReadLine();
@@ -223,19 +223,13 @@ namespace Homework001
                         break;
 
                     case 7:
-                        Console.WriteLine("dili secin:");
-                        int c = Convert.ToInt32(Console.ReadLine());
-                        language = c;
-
+                        goto StartLanguage;
                         break;
                         #endregion
 
 
                 }
             }
-
-
-
         }
     }
 }

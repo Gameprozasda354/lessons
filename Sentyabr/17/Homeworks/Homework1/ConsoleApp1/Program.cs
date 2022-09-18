@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Homework001
+namespace ConsoleApp1
 {
     internal class Program
     {
@@ -27,13 +27,14 @@ namespace Homework001
              Tur: 1 - Yeni element ekle
              */
             Hashtable translateEng = new Hashtable();
-            translateEng.Add("add_element", "1 - Add the Element");
-            translateEng.Add("show_element", "2 - Show the Elements");
-            translateEng.Add("search_element", "3 - Search the Elements");
-            translateEng.Add("edit_element", "4 - Edit the Element");
-            translateEng.Add("delete_element", "5 - Delete the Element");
-            translateEng.Add("exit", "6 - Exit");
-            translateEng.Add("action_type", "Choose the type of the action");
+            translateEng.Add("menu_add_element", "1 - Add the Element");
+            translateEng.Add("menu_show_element", "2 - Show the Elements");
+            translateEng.Add("menu_search_element", "3 - Search the Elements");
+            translateEng.Add("menu_edit_element", "4 - Edit the Element");
+            translateEng.Add("menu_delete_element", "5 - Delete the Element");
+            translateEng.Add("menu_exit", "6 - Exit");
+            translateEng.Add("menu_change_language", "7 - Change the language");
+            translateEng.Add("menu_action_type", "Choose the type of the action:");
             translateEng.Add("added_element", "Please enter the element which do you want to add.");
             translateEng.Add("element_added", "Element added.");
             translateEng.Add("press_enter", "Press Enter for continue");
@@ -53,13 +54,14 @@ namespace Homework001
             translateEng.Add("notfound_delete", "Element not found that you want to delete");
 
             Hashtable translateAze = new Hashtable();
-            translateAze.Add("add_element", "1 - Element əlavə et");
-            translateAze.Add("show_element", "2 - Elementleri göstər");
-            translateAze.Add("search_element", "3 - Element axtar");
-            translateAze.Add("edit_element", "4 - Element editlə");
-            translateAze.Add("delete_element", "5 - Element sil");
-            translateAze.Add("exit", "6 - Çıxış");
-            translateAze.Add("action_type", "Əməliyyat novünü seçin:");
+            translateAze.Add("menu_add_element", "1 - Element əlavə et");
+            translateAze.Add("menu_show_element", "2 - Elementleri göstər");
+            translateAze.Add("menu_search_element", "3 - Element axtar");
+            translateAze.Add("menu_edit_element", "4 - Element editlə");
+            translateAze.Add("menu_delete_element", "5 - Element sil");
+            translateAze.Add("menu_exit", "6 - Çıxış");
+            translateAze.Add("menu_change_language", "7 - Dili dəyişdir");
+            translateAze.Add("menu_action_type", "Əməliyyat novünü seçin:");
             translateAze.Add("added_element", "Əlave etmək istədiyiniz elementi daxil edin");
             translateAze.Add("element_added", "Element əlave olundu");
             translateAze.Add("press_enter", "Davam etmək üçün enterə basın");
@@ -79,13 +81,14 @@ namespace Homework001
             translateAze.Add("notfound_delete", "Silmək istədiyiniz element tapılmadı!");
 
             Hashtable translateTur = new Hashtable();
-            translateTur.Add("add_element", "1 - Element ekle");
-            translateTur.Add("show_element", "2 - Elementleri çıkar");
-            translateTur.Add("search_element", "3 - Element ara");
-            translateTur.Add("edit_element", "4 - Element editle");
-            translateTur.Add("delete_element", "5 - Element sil");
-            translateTur.Add("exit", "6 - Çıkış");
-            translateTur.Add("action_type", "İşlemin türünü seçin:");
+            translateTur.Add("menu_add_element", "1 - Element ekle");
+            translateTur.Add("menu_show_element", "2 - Elementleri çıkar");
+            translateTur.Add("menu_search_element", "3 - Element ara");
+            translateTur.Add("menu_edit_element", "4 - Element editle");
+            translateTur.Add("menu_delete_element", "5 - Element sil");
+            translateTur.Add("menu_exit", "6 - Çıkış");
+            translateTur.Add("menu_change_language", "7 - Dili değiştir");
+            translateTur.Add("menu_action_type", "İşlemin türünü seçin:");
             translateTur.Add("added_element", "Eklemek istediğiniz elementi yazın");
             translateTur.Add("element_added", "Element eklendi");
             translateTur.Add("press_enter", "Devam etmek için entere tıklayın");
@@ -133,13 +136,14 @@ namespace Homework001
                 }
 
                 Console.WriteLine("Menu:");
-                Console.WriteLine(selectedLanguage["add_element"]);
-                Console.WriteLine(selectedLanguage["show_element"]);
-                Console.WriteLine(selectedLanguage["search_element"]);
-                Console.WriteLine(selectedLanguage["edit_element"]);
-                Console.WriteLine(selectedLanguage["delete_element"]);
-                Console.WriteLine(selectedLanguage["exit"]);
-                Console.WriteLine(selectedLanguage["action_type"]);
+                Console.WriteLine(selectedLanguage["menu_add_element"]);
+                Console.WriteLine(selectedLanguage["menu_show_element"]);
+                Console.WriteLine(selectedLanguage["menu_search_element"]);
+                Console.WriteLine(selectedLanguage["menu_edit_element"]);
+                Console.WriteLine(selectedLanguage["menu_delete_element"]);
+                Console.WriteLine(selectedLanguage["menu_exit"]);
+                Console.WriteLine(selectedLanguage["menu_change_language"]);
+                Console.WriteLine(selectedLanguage["menu_action_type"]);
                 int type = Convert.ToInt32(Console.ReadLine());
 
                 switch (type)
@@ -197,12 +201,12 @@ namespace Homework001
 
                         Console.WriteLine(selectedLanguage["delete_all"]);
                         var answer = Console.ReadLine();
-                        if (answer.ToUpper() == selectedLanguage["Y"])
+                        if (answer.ToUpper() == (string)selectedLanguage["Y"])
                         {
                             numbers.Clear();
                             Console.WriteLine(selectedLanguage["all_deleted"]);
                         }
-                        if (answer.ToUpper() == selectedLanguage["N"])
+                        if (answer.ToUpper() == (string)selectedLanguage["N"])
                         {
                             Console.WriteLine(selectedLanguage["delete_element"]);
                             var count4 = Console.ReadLine();
@@ -223,7 +227,7 @@ namespace Homework001
                         break;
 
                     case 7:
-                        Console.WriteLine("dili secin:");
+                        Console.WriteLine("1.Aze, 2.Eng, 3.Tur");
                         int c = Convert.ToInt32(Console.ReadLine());
                         language = c;
 
@@ -233,8 +237,6 @@ namespace Homework001
 
                 }
             }
-
-
 
         }
     }
