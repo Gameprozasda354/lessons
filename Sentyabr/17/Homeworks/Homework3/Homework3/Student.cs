@@ -18,16 +18,19 @@ namespace Homework3
 
         public void CalcAverage()
         {
-            
+
         }
 
-        public string RateAverage(int result, int rate)
+        public string RateAverage(string name, string surname, int result, int rate)
         {
-            string answer = "kəsildiniz";
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.InputEncoding = Encoding.UTF8;
 
-            if(result > rate)
+            string answer = surname + name + " siz imtahandan kəsildiniz";
+
+            if (result > rate)
             {
-                answer = "keçdiniz";
+                answer = surname + " " + name + " siz imtahandan keçdiniz";
             }
 
             return answer;
