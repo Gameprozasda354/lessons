@@ -154,6 +154,7 @@ namespace ConsoleApp1
                         Console.WriteLine(selectedLanguage["element_added"]);
                         Console.WriteLine(selectedLanguage["press_enter"]);
                         Console.ReadLine();
+                        Console.Clear();
 
                         break;
                     case 2:
@@ -164,6 +165,7 @@ namespace ConsoleApp1
                         }
                         Console.WriteLine(selectedLanguage["press_enter"]);
                         Console.ReadLine();
+                        Console.Clear();
 
                         break;
                     case 3:
@@ -179,6 +181,7 @@ namespace ConsoleApp1
                             Console.WriteLine(selectedLanguage["notfound_element"]);
                         Console.WriteLine(selectedLanguage["press_enter"]);
                         Console.ReadLine();
+                        Console.Clear();
 
                         break;
                     case 4:
@@ -195,6 +198,7 @@ namespace ConsoleApp1
                             Console.WriteLine(selectedLanguage["notfound_element"]);
                         Console.WriteLine(selectedLanguage["press_enter"]);
                         Console.ReadLine();
+                        Console.Clear();
 
                         break;
                     case 5:
@@ -220,19 +224,22 @@ namespace ConsoleApp1
                         }
                         Console.WriteLine(selectedLanguage["press_enter"]);
                         Console.ReadLine();
+                        Console.Clear();
 
                         break;
                     case 6:
                         continue1 = false;
+                        Console.Clear();
                         break;
 
                     case 7:
                         Console.WriteLine("1.Aze, 2.Eng, 3.Tur");
                         int c = Convert.ToInt32(Console.ReadLine());
                         language = c;
+                        Console.Clear();
 
                         break;
-                        #endregion
+                    #endregion
 
 
                 }

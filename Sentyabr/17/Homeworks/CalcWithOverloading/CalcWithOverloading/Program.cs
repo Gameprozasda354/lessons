@@ -104,10 +104,11 @@ namespace CalcWithOverloading
             string answer = Console.ReadLine();
 
             if (answer.ToUpper() == "H")
+            {
                 Console.Clear();
-            goto BeginAgain;
+                goto BeginAgain;
+            }
 
-            Console.ReadLine();
         }
     }
 }

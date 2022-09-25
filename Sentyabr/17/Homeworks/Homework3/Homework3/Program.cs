@@ -31,9 +31,8 @@ namespace Homework3
 
             Console.WriteLine("3. balınızı daxil edin:");
             int c = Convert.ToInt32(Console.ReadLine());
-
-            int answer = student.CalcAverage(a, b, c);
-            var check = student.RateAverage(name, surName, answer, rate);
+            
+            var check = student.RateAverage(name, surName, a, b, c, rate);
 
             Console.WriteLine(check);
 

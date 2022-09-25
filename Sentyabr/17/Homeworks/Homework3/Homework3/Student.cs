@@ -21,11 +21,12 @@ namespace Homework3
 
         }
 
-        public string RateAverage(string name, string surname, int result, int rate)
+        public string RateAverage(string name, string surname, int a,int b, int c, int rate)
         {
             Console.OutputEncoding = Encoding.UTF8;
             Console.InputEncoding = Encoding.UTF8;
 
+            int result = CalcAverage(a, b, c);
             string answer = surname + name + " siz imtahandan kəsildiniz";
 
             if (result > rate)
