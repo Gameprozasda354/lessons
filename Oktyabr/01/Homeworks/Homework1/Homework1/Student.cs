@@ -21,8 +21,6 @@ namespace Homework1
                 if(surName == null)
                 {
                     name = value;
-                    surName = null;
-                    email = null;
                 }
 
                 else
@@ -46,8 +44,6 @@ namespace Homework1
                 if (name == null)
                 {
                     surName = value;
-                    name = null;
-                    email = null;
                 }
 
                 else

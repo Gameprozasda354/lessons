@@ -13,8 +13,8 @@ namespace Homework1
 
             Student student = new Student();
 
-            student.Name = "Orkhan"; 
             student.SurName = "Farajov";
+            student.Name = "Orkhan"; 
 
             Console.WriteLine(student.Email);
 
