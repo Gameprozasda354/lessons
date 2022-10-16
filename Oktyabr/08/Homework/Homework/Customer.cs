@@ -9,10 +9,6 @@ namespace Homework
     internal class Customer
     {
         private static string[] arrayList;
-    
-        public void Array1(string[] _arrayList)
-        {
-            arrayList = _arrayList;
-        }
+        
     }
 }
