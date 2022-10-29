@@ -23,5 +23,6 @@ namespace InnerType
             Addresses = new Address[100];
             Orders = new Order[100];
         }
+
     }
 }
