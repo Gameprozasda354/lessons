@@ -20,5 +20,9 @@ namespace Abstract_Interface
             Console.WriteLine("Customer -> ShowTime {0}", DateTime.Now);
         }
         #endregion
+
+        #region Interface
+
+        #endregion
     }
 }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeworkOfInheritance", "Ho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract-Interface", "Abstract-Interface\Abstract-Interface.csproj", "{EF7FD2ED-E7EE-47FD-A69A-9640F8ED079A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework", "Homework\Homework.csproj", "{73BE8244-DD2D-4748-9D24-D3D549934FC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{EF7FD2ED-E7EE-47FD-A69A-9640F8ED079A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF7FD2ED-E7EE-47FD-A69A-9640F8ED079A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF7FD2ED-E7EE-47FD-A69A-9640F8ED079A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73BE8244-DD2D-4748-9D24-D3D549934FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73BE8244-DD2D-4748-9D24-D3D549934FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73BE8244-DD2D-4748-9D24-D3D549934FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73BE8244-DD2D-4748-9D24-D3D549934FC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
