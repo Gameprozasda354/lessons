@@ -10,7 +10,7 @@ namespace Homework
     {
         static void Main(string[] args)
         {
-            /*
+             /*
              Homework 1:
                   Bu gün ev tapşırığınız abstract, interface, virtual method'ları araşdırmaqdır.
                   Araşdırandan sonra da, gələn dərsə qədər bir nümunə hazırlamağa çalışın. Bu bir kiçik kitabxana app'ı,
