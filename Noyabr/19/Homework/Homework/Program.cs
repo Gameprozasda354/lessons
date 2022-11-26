@@ -13,6 +13,7 @@ namespace Homework
             DataBase dataBase = new DataBase();
             dataBase.AddingFunction();
             dataBase.ShowMenu();
+
         }
         /*
              Homework 1:
