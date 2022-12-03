@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace Homework
 {
-    internal class Writer
+    internal class CoverType
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string SurName { get; set; }
-        public string BornDate { get; set; }
-        public string DeadDate { get; set; }
-
-        public Writer()
+        public CoverType()
         {
             DataBase.Id += 1;
         }
