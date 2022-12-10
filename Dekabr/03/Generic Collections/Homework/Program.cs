@@ -12,7 +12,7 @@ namespace Homework
         {
             /*
              Generic class yaradaraq (Repository) Add, Update, Get, Delete method'larını yazın. Həmin repository'nin instance'ını
-             Student, Customer, Techer və Book class'ları ilə yaradıb hər bir method'u istifadə edə bilməlisiz. GenericRepository
+             Student, Customer, Teacher və Book class'ları ilə yaradıb hər bir method'u istifadə edə bilməlisiz. GenericRepository
              class'ı üçün İnterface'də istifadə edin.
              */
         }
