@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{57F05DC4-DAFF-4A06-8BAE-C91B62FDB712}</ProjectGuid>
+    <ProjectGuid>{58FA6032-378E-4AEC-9614-F573DE8731CD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormFirstLesson</RootNamespace>
-    <AssemblyName>WindowsFormFirstLesson</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <RootNamespace>HomeworkWindowsForms</RootNamespace>
+    <AssemblyName>HomeworkWindowsForms</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chat1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chat1.Designer.cs">
+      <DependentUpon>Chat1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chat2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chat2.Designer.cs">
+      <DependentUpon>Chat2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,24 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SendMessage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SendMessage.Designer.cs">
-      <DependentUpon>SendMessage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ShowMessage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ShowMessage.Designer.cs">
-      <DependentUpon>ShowMessage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TestFormWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestFormWindow.Designer.cs">
-      <DependentUpon>TestFormWindow.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Chat1.resx">
+      <DependentUpon>Chat1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat2.resx">
+      <DependentUpon>Chat2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,17 +83,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SendMessage.resx">
-      <DependentUpon>SendMessage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ShowMessage.resx">
-      <DependentUpon>ShowMessage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TestFormWindow.resx">
-      <DependentUpon>TestFormWindow.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
