@@ -66,6 +66,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextLocation.cs" />
     <EmbeddedResource Include="Chat1.resx">
       <DependentUpon>Chat1.cs</DependentUpon>
     </EmbeddedResource>

@@ -28,20 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.text = new System.Windows.Forms.TextBox();
+            this.chat1Message = new System.Windows.Forms.TextBox();
             this.send = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // text
+            // chat1Message
             // 
-            this.text.Location = new System.Drawing.Point(47, 418);
-            this.text.Name = "text";
-            this.text.Size = new System.Drawing.Size(424, 20);
-            this.text.TabIndex = 0;
+            this.chat1Message.Location = new System.Drawing.Point(12, 12);
+            this.chat1Message.MaxLength = 123;
+            this.chat1Message.Multiline = true;
+            this.chat1Message.Name = "chat1Message";
+            this.chat1Message.Size = new System.Drawing.Size(497, 117);
+            this.chat1Message.TabIndex = 0;
             // 
             // send
             // 
-            this.send.Location = new System.Drawing.Point(536, 391);
+            this.send.Location = new System.Drawing.Point(386, 135);
             this.send.Name = "send";
             this.send.Size = new System.Drawing.Size(123, 47);
             this.send.TabIndex = 1;
@@ -53,9 +55,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(520, 193);
             this.Controls.Add(this.send);
-            this.Controls.Add(this.text);
+            this.Controls.Add(this.chat1Message);
             this.Name = "Chat1";
             this.Text = "Chat1";
             this.ResumeLayout(false);
@@ -65,7 +67,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox text;
+        private System.Windows.Forms.TextBox chat1Message;
         private System.Windows.Forms.Button send;
     }
 }
