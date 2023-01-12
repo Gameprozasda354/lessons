@@ -30,14 +30,16 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.saveBtn = new System.Windows.Forms.Button();
+            this.addBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.surnameTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.fatherNameTextBox = new System.Windows.Forms.TextBox();
+            this.showBtn = new System.Windows.Forms.Button();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
-            this.clearFormBtn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -54,16 +56,17 @@
             this.nameTextBox.Location = new System.Drawing.Point(150, 6);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(151, 20);
-            this.nameTextBox.TabIndex = 1;
+            this.nameTextBox.TabIndex = 0;
             // 
-            // saveBtn
+            // addBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(201, 110);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(100, 23);
-            this.saveBtn.TabIndex = 2;
-            this.saveBtn.Text = "Yadda Saxla";
-            this.saveBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Location = new System.Drawing.Point(201, 139);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(100, 23);
+            this.addBtn.TabIndex = 5;
+            this.addBtn.Text = "Elave et";
+            this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.AddCustomerBtn);
             // 
             // label2
             // 
@@ -88,9 +91,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 87);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 13);
+            this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Telefon nömrəsi";
+            this.label4.Text = "Ata adı";
             // 
             // surnameTextBox
             // 
@@ -104,33 +107,51 @@
             this.emailTextBox.Location = new System.Drawing.Point(150, 58);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(151, 20);
-            this.emailTextBox.TabIndex = 1;
+            this.emailTextBox.TabIndex = 2;
+            // 
+            // fatherNameTextBox
+            // 
+            this.fatherNameTextBox.Location = new System.Drawing.Point(150, 84);
+            this.fatherNameTextBox.Name = "fatherNameTextBox";
+            this.fatherNameTextBox.Size = new System.Drawing.Size(151, 20);
+            this.fatherNameTextBox.TabIndex = 3;
+            // 
+            // showBtn
+            // 
+            this.showBtn.Location = new System.Drawing.Point(201, 168);
+            this.showBtn.Name = "showBtn";
+            this.showBtn.Size = new System.Drawing.Size(100, 23);
+            this.showBtn.TabIndex = 6;
+            this.showBtn.Text = "Göstər";
+            this.showBtn.UseVisualStyleBackColor = true;
+            this.showBtn.Click += new System.EventHandler(this.ShowCustomers);
             // 
             // phoneTextBox
             // 
-            this.phoneTextBox.Location = new System.Drawing.Point(150, 84);
+            this.phoneTextBox.Location = new System.Drawing.Point(150, 110);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(151, 20);
-            this.phoneTextBox.TabIndex = 1;
+            this.phoneTextBox.TabIndex = 4;
             // 
-            // clearFormBtn
+            // label5
             // 
-            this.clearFormBtn.Location = new System.Drawing.Point(201, 139);
-            this.clearFormBtn.Name = "clearFormBtn";
-            this.clearFormBtn.Size = new System.Drawing.Size(100, 23);
-            this.clearFormBtn.TabIndex = 3;
-            this.clearFormBtn.Text = "Təmizlə";
-            this.clearFormBtn.UseVisualStyleBackColor = true;
-            this.clearFormBtn.Click += new System.EventHandler(this.clearFormBtn_Click);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 113);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Telefon nömrəsi";
             // 
             // FormControls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.clearFormBtn);
-            this.Controls.Add(this.saveBtn);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.phoneTextBox);
+            this.Controls.Add(this.showBtn);
+            this.Controls.Add(this.addBtn);
+            this.Controls.Add(this.fatherNameTextBox);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.surnameTextBox);
             this.Controls.Add(this.nameTextBox);
@@ -140,7 +161,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FormControls";
             this.Text = "FormControls";
-            this.Load += new System.EventHandler(this.FormControls_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,13 +170,15 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox surnameTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox fatherNameTextBox;
+        private System.Windows.Forms.Button showBtn;
         private System.Windows.Forms.TextBox phoneTextBox;
-        private System.Windows.Forms.Button clearFormBtn;
+        private System.Windows.Forms.Label label5;
     }
 }

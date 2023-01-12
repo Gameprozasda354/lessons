@@ -17,39 +17,47 @@ namespace WindowsFormsAppPart3
             InitializeComponent();
         }
 
-        private void FormControls_Load(object sender, EventArgs e)
+        private void ShowCustomers(object sender, EventArgs e)
         {
-            //foreach (Control item in this.Controls)
-            //{
-            //    MessageBox.Show(item.Name);
-            //}
+            View view = new View();
+            view.ShowDialog();
         }
 
-        private void clearFormBtn_Click(object sender, EventArgs e)
+        private void AddCustomerBtn(object sender, EventArgs e)
         {
-            DialogResult resultEnum = MessageBox.Show(
-                                                        "Form dəyərlərini sıfırlamaq istədiyinizdən əminsiniz?",
-                                                        "Sıfırlamaq",
-                                                        MessageBoxButtons.YesNo,
-                                                        MessageBoxIcon.Question);
+            Customer customer = new Customer(){
+                Id = Guid.NewGuid(),
+                Name = nameTextBox.Text,
+                Surname = surnameTextBox.Text,
+                Email = emailTextBox.Text,
+                FatherName = fatherNameTextBox.Text,
+                PhoneNumber = phoneTextBox.Text
+            };
+            int count = AddCustomer(customer);
 
-            if(resultEnum == DialogResult.Yes)
+            if(count > 0)
             {
-                foreach (Control item in this.Controls)
-                {
-                    if(item is TextBox)
-                    {
-                        TextBox textBox = (TextBox)item;
-                        textBox.Text = string.Empty;
-                    }
-                }
+                MessageBox.Show("Yeni müştəri əlavə edildi", "Informasiya", MessageBoxButtons.OK, MessageBoxIcon.None);
+                ClearInputs();
+            } 
 
-                //ikinci variant index dəyərinə görə element seçmək:
-                //((TextBox)this.Controls["nameTextBox"]).Text = string.Empty;
-                //((TextBox)this.Controls["surnameTextBox"]).Text = string.Empty;
-                //((TextBox)this.Controls["emailTextBox"]).Text = string.Empty;
-                //((TextBox)this.Controls["phoneTextBox"]).Text = string.Empty;
-            }
+            else
+                MessageBox.Show("Yeni müştəri əlavə edilmədi!", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         }
+        private int AddCustomer(Customer customer)
+        {
+            VirtualDatabase.Customers.Add(customer);
+            return 1;
+        }
+        private void ClearInputs()
+        {
+            nameTextBox.Text = string.Empty;
+            surnameTextBox.Text = string.Empty;
+            fatherNameTextBox.Text = string.Empty;
+            emailTextBox.Text = string.Empty;
+            phoneTextBox.Text = string.Empty;
+        }
+
     }
 }
