@@ -40,6 +40,8 @@
             this.showBtn = new System.Windows.Forms.Button();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.cityDropDwn = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +62,7 @@
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(201, 139);
+            this.addBtn.Location = new System.Drawing.Point(201, 163);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(100, 23);
             this.addBtn.TabIndex = 5;
@@ -118,7 +120,7 @@
             // 
             // showBtn
             // 
-            this.showBtn.Location = new System.Drawing.Point(201, 168);
+            this.showBtn.Location = new System.Drawing.Point(200, 192);
             this.showBtn.Name = "showBtn";
             this.showBtn.Size = new System.Drawing.Size(100, 23);
             this.showBtn.TabIndex = 6;
@@ -142,11 +144,30 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Telefon nömrəsi";
             // 
+            // cityDropDwn
+            // 
+            this.cityDropDwn.FormattingEnabled = true;
+            this.cityDropDwn.Location = new System.Drawing.Point(150, 136);
+            this.cityDropDwn.Name = "cityDropDwn";
+            this.cityDropDwn.Size = new System.Drawing.Size(150, 21);
+            this.cityDropDwn.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 139);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Seher";
+            // 
             // FormControls
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cityDropDwn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.phoneTextBox);
             this.Controls.Add(this.showBtn);
@@ -161,6 +182,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormControls";
             this.Text = "FormControls";
+            this.Load += new System.EventHandler(this.FormControls_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,5 +202,7 @@
         private System.Windows.Forms.Button showBtn;
         private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cityDropDwn;
+        private System.Windows.Forms.Label label6;
     }
 }

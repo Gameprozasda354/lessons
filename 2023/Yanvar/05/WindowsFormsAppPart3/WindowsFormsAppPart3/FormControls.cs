@@ -25,13 +25,14 @@ namespace WindowsFormsAppPart3
 
         private void AddCustomerBtn(object sender, EventArgs e)
         {
-            Customer customer = new Customer(){
+            Customer2 customer = new Customer2(){
                 Id = Guid.NewGuid(),
                 Name = nameTextBox.Text,
                 Surname = surnameTextBox.Text,
                 Email = emailTextBox.Text,
                 FatherName = fatherNameTextBox.Text,
-                PhoneNumber = phoneTextBox.Text
+                PhoneNumber = phoneTextBox.Text,
+                City = cityDropDwn.SelectedItem.ToString()
             };
             int count = AddCustomer(customer);
 
@@ -45,9 +46,9 @@ namespace WindowsFormsAppPart3
                 MessageBox.Show("Yeni müştəri əlavə edilmədi!", "Xəta", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
-        private int AddCustomer(Customer customer)
+        private int AddCustomer(Customer2 customer)
         {
-            VirtualDatabase.Customers.Add(customer);
+            VirtualDatabase2.Customers.Add(customer);
             return 1;
         }
         private void ClearInputs()
@@ -57,7 +58,21 @@ namespace WindowsFormsAppPart3
             fatherNameTextBox.Text = string.Empty;
             emailTextBox.Text = string.Empty;
             phoneTextBox.Text = string.Empty;
+            cityDropDwn.SelectedIndex = 0;
         }
 
+        private void FormControls_Load(object sender, EventArgs e)
+        {
+            string[] cities =
+            {
+                "Sumqayıt",
+                "Bakı",
+                "Gəncə",
+                "Xaçmaz",
+                "Ağdam",
+                "Suşa",
+            };
+            cityDropDwn.Items.AddRange(cities);
+        }
     }
 }

@@ -8,17 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsAppPart3
+namespace Task
 {
-    public partial class View : Form
+    public partial class Elements : Form
     {
-        public View()
+        public Elements()
         {
             InitializeComponent();
-        }
-        private void View_Load(object sender, EventArgs e)
-        {
-            customersList.DataSource = VirtualDatabase2.Customers;
         }
     }
 }

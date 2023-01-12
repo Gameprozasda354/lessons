@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C0EB8112-62DD-4A18-AC27-09626CD4AA76}</ProjectGuid>
+    <ProjectGuid>{3AD72628-BF0F-4E02-A3F8-F46BAB200D05}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsAppPart3</RootNamespace>
-    <AssemblyName>WindowsFormsAppPart3</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <RootNamespace>Task</RootNamespace>
+    <AssemblyName>Task</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,66 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer.cs" />
-    <Compile Include="Customer2.cs" />
-    <Compile Include="CustomerApp.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerApp.Designer.cs">
-      <DependentUpon>CustomerApp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FirstForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FirstForm.Designer.cs">
-      <DependentUpon>FirstForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormControls.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormControls.Designer.cs">
-      <DependentUpon>FormControls.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MessageBoxExamples.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MessageBoxExamples.Designer.cs">
-      <DependentUpon>MessageBoxExamples.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SecondForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SecondForm.Designer.cs">
-      <DependentUpon>SecondForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ShowAndShowDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ShowAndShowDialog.Designer.cs">
-      <DependentUpon>ShowAndShowDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View.Designer.cs">
-      <DependentUpon>View.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VirtualDatabase.cs" />
-    <Compile Include="VirtualDatabase2.cs" />
-    <EmbeddedResource Include="CustomerApp.resx">
-      <DependentUpon>CustomerApp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FirstForm.resx">
-      <DependentUpon>FirstForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormControls.resx">
-      <DependentUpon>FormControls.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MessageBoxExamples.resx">
-      <DependentUpon>MessageBoxExamples.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -115,17 +62,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SecondForm.resx">
-      <DependentUpon>SecondForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ShowAndShowDialog.resx">
-      <DependentUpon>ShowAndShowDialog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View.resx">
-      <DependentUpon>View.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
