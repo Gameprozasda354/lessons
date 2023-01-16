@@ -16,7 +16,7 @@ namespace Task
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Panel());
+            Application.Run(new Form1());
         }
     }
 }
