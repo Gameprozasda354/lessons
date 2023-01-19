@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.GroupBox();
-            this.listOfItems = new System.Windows.Forms.ComboBox();
-            this.delete = new System.Windows.Forms.Button();
-            this.itemName = new System.Windows.Forms.TextBox();
             this.add = new System.Windows.Forms.Button();
+            this.itemName = new System.Windows.Forms.TextBox();
+            this.delete = new System.Windows.Forms.Button();
+            this.listOfItems = new System.Windows.Forms.ComboBox();
             this.scaleName = new System.Windows.Forms.GroupBox();
             this.elements = new System.Windows.Forms.FlowLayoutPanel();
             this.panel.SuspendLayout();
@@ -52,12 +52,22 @@
             this.panel.TabStop = false;
             this.panel.Text = "Panel";
             // 
-            // listOfItems
+            // add
             // 
-            this.listOfItems.Location = new System.Drawing.Point(6, 162);
-            this.listOfItems.Name = "listOfItems";
-            this.listOfItems.Size = new System.Drawing.Size(194, 21);
-            this.listOfItems.TabIndex = 3;
+            this.add.Location = new System.Drawing.Point(226, 39);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(75, 23);
+            this.add.TabIndex = 2;
+            this.add.Text = "Add";
+            this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
+            // 
+            // itemName
+            // 
+            this.itemName.Location = new System.Drawing.Point(9, 43);
+            this.itemName.Name = "itemName";
+            this.itemName.Size = new System.Drawing.Size(191, 20);
+            this.itemName.TabIndex = 1;
             // 
             // delete
             // 
@@ -69,22 +79,13 @@
             this.delete.UseVisualStyleBackColor = true;
             this.delete.Click += new System.EventHandler(this.DeleteElement);
             // 
-            // itemName
+            // listOfItems
             // 
-            this.itemName.Location = new System.Drawing.Point(9, 43);
-            this.itemName.Name = "itemName";
-            this.itemName.Size = new System.Drawing.Size(191, 20);
-            this.itemName.TabIndex = 1;
-            // 
-            // add
-            // 
-            this.add.Location = new System.Drawing.Point(226, 39);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(75, 23);
-            this.add.TabIndex = 2;
-            this.add.Text = "Add";
-            this.add.UseVisualStyleBackColor = true;
-            this.add.Click += new System.EventHandler(this.add_Click);
+            this.listOfItems.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.listOfItems.Location = new System.Drawing.Point(6, 162);
+            this.listOfItems.Name = "listOfItems";
+            this.listOfItems.Size = new System.Drawing.Size(194, 21);
+            this.listOfItems.TabIndex = 3;
             // 
             // scaleName
             // 
@@ -98,6 +99,7 @@
             // 
             // elements
             // 
+            this.elements.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.elements.Location = new System.Drawing.Point(6, 19);
             this.elements.Name = "elements";
             this.elements.Size = new System.Drawing.Size(1041, 577);

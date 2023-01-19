@@ -84,10 +84,15 @@ namespace Task
                     break;
                 case "FlowLayoutPanel":
                     FlowLayoutPanel flowLayoutPanel = new FlowLayoutPanel();
+                    Button button = new Button();
+                    button.Name = count.ToString();
+                    button.Text = count.ToString();
                     flowLayoutPanel.Name = "FlowLayoutPanel" + count;
                     flowLayoutPanel.Text = count.ToString();
+                    flowLayoutPanel.BorderStyle = BorderStyle.FixedSingle;
+                    flowLayoutPanel.Controls.Add(button);
 
-                    listOfItems.Items.Add("flowLayoutPanel" + count);
+                    listOfItems.Items.Add("FlowLayoutPanel" + count);
                     elements.Controls.Add(flowLayoutPanel);
                     itemName.Text = "";
                     count++;
@@ -355,7 +360,6 @@ namespace Task
                 case "WebBrowser":
                     WebBrowser webBrowser = new WebBrowser();
                     webBrowser.Name = "WebBrowser" + count;
-                    webBrowser.Text = count.ToString();
 
                     listOfItems.Items.Add("WebBrowser" + count);
                     elements.Controls.Add(webBrowser);
