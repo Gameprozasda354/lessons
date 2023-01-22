@@ -23,9 +23,30 @@ namespace MineField.MineFieldGame
         {
             Random rand = new Random();
 
-            int mineBox1 = rand.Next(1, 30);
-            int mineBox2 = rand.Next(31, 60);
-            int mineBox3 = rand.Next(61, 100);
+            bool exit = true;
+            int mineBox1 = rand.Next(1, 100);
+            int mineBox2 = rand.Next(1, 100);
+            int mineBox3 = rand.Next(1, 100);
+
+            while (exit)
+            {
+                if (mineBox1 == mineBox2)
+                {
+                    mineBox1 = rand.Next(1, 100);
+                }
+                if (mineBox1 == mineBox3)
+                {
+                    mineBox3 = rand.Next(1, 100);
+                }
+                if (mineBox2 == mineBox3)
+                {
+                    mineBox2 = rand.Next(1, 100);
+                }
+                else {
+                    exit = false;
+                }
+            }
+            
 
             for (int i = 1; i <= 100; i++)
             {
@@ -53,15 +74,37 @@ namespace MineField.MineFieldGame
         {
             Random rand = new Random();
 
-            int mineBox1 = rand.Next(1, 30);
-            int mineBox2 = rand.Next(31, 60);
-            int mineBox3 = rand.Next(61, 100);
+            bool exit = true;
+            int mineBox1 = rand.Next(1, 100);
+            int mineBox2 = rand.Next(1, 100);
+            int mineBox3 = rand.Next(1, 100);
+
+            while (exit)
+            {
+                if (mineBox1 == mineBox2)
+                {
+                    mineBox1 = rand.Next(1, 100);
+                }
+                if (mineBox1 == mineBox3)
+                {
+                    mineBox3 = rand.Next(1, 100);
+                }
+                if (mineBox2 == mineBox3)
+                {
+                    mineBox2 = rand.Next(1, 100);
+                }
+                else
+                {
+                    exit = false;
+                }
+            }
 
             for (int i = 0; i < minePanel.Controls.Count; i++)
             {
                 var button = (Button)minePanel.Controls[i];
 
                 button.Enabled = true;
+                button.Image = null;
                 button.BackColor = SystemColors.ControlDark;
 
                 if (mineBox1 == i || mineBox2 == i || mineBox3 == i)
@@ -88,7 +131,7 @@ namespace MineField.MineFieldGame
                 if(isBoxMine == true)
                 {
                     MessageBox.Show("Minaya dusdunuz!");
-                    clickedButton.BackColor = Color.Red;
+                    clickedButton.Image = Image.FromFile(@"C:\Users\Omer\Downloads\bomb.png");
 
                     int mineCount = int.Parse(mineLbl.Text)-1;
                     mineLbl.Text = mineCount.ToString();
