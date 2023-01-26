@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,8 +21,13 @@ namespace MemoryGame
         PictureBox pictureBox2;
         DateTime startTime, endTime;
         TimeSpan record = new TimeSpan();
+
+        Timer _timer = new Timer();
+        Stopwatch _stopwatch = new Stopwatch();
+        string TimeFormat = "hh\\ \\:\\ mm\\ \\:\\ ss";
+
         int recordClick;
-        int clicks = 0;
+        int clicks;
         bool firstGame = true;
         bool gameOver = false;
 
@@ -34,6 +40,7 @@ namespace MemoryGame
         }
         private void LoadPictures()
         {
+            clicks = 0;
 
             for (int i = 0; i < 20; i++)
             {
@@ -55,6 +62,7 @@ namespace MemoryGame
         private void NewPic_Click(object sender, EventArgs e)
         {
             clicks++;
+            click.Text = clicks.ToString();
             
             if (gameOver)
             {
@@ -105,6 +113,8 @@ namespace MemoryGame
 
             if (pictures.All(o => o.Tag == pictures[0].Tag))
             {
+                _timer.Stop();
+                _stopwatch.Stop();
                 GameOver();
             }
 
@@ -116,6 +126,15 @@ namespace MemoryGame
         private void RestartGame()
         {
             startTime = DateTime.Now;
+            clicks = 0;
+            click.Text = "0";
+
+            _timer.Stop();
+            _stopwatch.Restart();
+
+            _timer.Interval = 1000;
+            _timer.Tick += CountTime;
+            _timer.Start();
 
             var randomList = numbers.OrderBy(x => Guid.NewGuid()).ToList();
 
@@ -132,17 +151,21 @@ namespace MemoryGame
 
         }
 
+        private void CountTime(object sender, EventArgs e)
+        {
+            time.Text = _stopwatch.Elapsed.ToString(TimeFormat);
+        }
+
         private void GameOver()
         {
+
             endTime = DateTime.Now;
             if (firstGame == true)
             {
-                clicks =  recordClick;
+                recordClick = clicks;
                 record = endTime - startTime;
-                timeRecord.Text = record.Minutes.ToString() + ":" +
-                    record.Seconds.ToString() + ":" +
-                    record.Milliseconds.ToString();
-                clickRecord.Text = clicks.ToString();
+                timeRecord.Text = record.ToString(@"mm\:ss\:fff");
+                clickRecord.Text = recordClick.ToString();
                 firstGame = false;
                 
             }
@@ -151,9 +174,7 @@ namespace MemoryGame
                 if(record == (endTime - startTime) && clicks < recordClick)
                 {
                     recordClick = clicks;
-                    timeRecord.Text = record.Minutes.ToString() + ":" +
-                    record.Seconds.ToString() + ":" +
-                    record.Milliseconds.ToString();
+                    timeRecord.Text = record.ToString(@"mm\:ss\:fff");
                     clickRecord.Text = clicks.ToString();
                     MessageBox.Show("Rekord Yenilendi!", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -161,15 +182,15 @@ namespace MemoryGame
                 {
                     recordClick = clicks;
                     record = endTime - startTime;
-                    timeRecord.Text = record.Minutes.ToString() + ":" +
-                    record.Seconds.ToString() + ":" +
-                    record.Milliseconds.ToString();
+                    timeRecord.Text = record.ToString(@"mm\:ss\:fff");
                     clickRecord.Text = clicks.ToString();
                     MessageBox.Show("Rekord Yenilendi!", "Record", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    RestartGame();
                 }
                 else
                 {
                     MessageBox.Show("Uduzdunuz!", "Lose", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    RestartGame();
                 }
             }
             gameOver = true;
