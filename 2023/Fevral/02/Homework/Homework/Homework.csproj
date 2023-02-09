@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A20F8A52-9A9C-4F12-9EF7-4369B0513DBA}</ProjectGuid>
+    <ProjectGuid>{E08DE008-1292-485E-844B-6B626631E157}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsAppPart5</RootNamespace>
-    <AssemblyName>WindowsFormsAppPart5</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <RootNamespace>Homework</RootNamespace>
+    <AssemblyName>Homework</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,54 +46,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Book.cs" />
-    <Compile Include="BookStockApp.cs">
+    <Compile Include="AddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BookStockApp.Designer.cs">
-      <DependentUpon>BookStockApp.cs</DependentUpon>
+    <Compile Include="AddForm.Designer.cs">
+      <DependentUpon>AddForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BookStockAppCheckedListBox.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BookStockAppCheckedListBox.Designer.cs">
-      <DependentUpon>BookStockAppCheckedListBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BookStockAppListBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BookStockAppListBox.Designer.cs">
-      <DependentUpon>BookStockAppListBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GroupBoxForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GroupBoxForm.Designer.cs">
-      <DependentUpon>GroupBoxForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MultipleListBoxResultView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MultipleListBoxResultView.Designer.cs">
-      <DependentUpon>MultipleListBoxResultView.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="VirtualDatabase.cs" />
-    <EmbeddedResource Include="BookStockApp.resx">
-      <DependentUpon>BookStockApp.cs</DependentUpon>
+    <EmbeddedResource Include="AddForm.resx">
+      <DependentUpon>AddForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BookStockAppCheckedListBox.resx">
-      <DependentUpon>BookStockAppCheckedListBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BookStockAppListBox.resx">
-      <DependentUpon>BookStockAppListBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GroupBoxForm.resx">
-      <DependentUpon>GroupBoxForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MultipleListBoxResultView.resx">
-      <DependentUpon>MultipleListBoxResultView.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,7 +76,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
