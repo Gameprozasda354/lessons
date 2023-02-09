@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace Tic_Tac_Toe
 {
@@ -37,15 +38,36 @@ namespace Tic_Tac_Toe
             {
                 if(winResult == "X")
                 {
-                    //ResetGame
-                    //User1 label deyis
+                    GameProcess.user1Point++;
+                    user1Score.Text = GameProcess.user1Point.ToString();
                 }
                 else if (winResult == "O")
                 {
-                    //ResetGame
-                    //User2 label deyis
+                    GameProcess.user2Point++;
+                    user2Score.Text = GameProcess.user2Point.ToString();
+                }
+
+                var gameEndCheckResult = GameRules.CheckGameEnded();
+
+                if (gameEndCheckResult != null)
+                {
+                    MessageBox.Show(gameEndCheckResult + " won!");
+                    GameProcess.ResetGame();
+                }
+                else
+                {
+                    GameProcess.ResetRound();
                 }
             }
+            else
+            {
+                var disabledBtnCount = Controls.OfType<Button>().Where(m => m.Enabled == false).Count();
+                if(disabledBtnCount == 9)
+                {
+                    GameProcess.ResetRound();
+                }
+            }
+
             GameProcess.ChangeQueue();
         }
     }
