@@ -174,6 +174,7 @@
             this.uploadImageBtn.TabIndex = 6;
             this.uploadImageBtn.Text = "Upload Image";
             this.uploadImageBtn.UseVisualStyleBackColor = true;
+            this.uploadImageBtn.Click += new System.EventHandler(this.uploadImageBtn_Click);
             // 
             // uploadCvBtn
             // 
@@ -183,6 +184,7 @@
             this.uploadCvBtn.TabIndex = 6;
             this.uploadCvBtn.Text = "Upload CV";
             this.uploadCvBtn.UseVisualStyleBackColor = true;
+            this.uploadCvBtn.Click += new System.EventHandler(this.uploadCvBtn_Click);
             // 
             // employeeJobDetails
             // 
