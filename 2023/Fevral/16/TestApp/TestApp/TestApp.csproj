@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6FF1E981-CC62-461A-B177-89FDCBDABDCB}</ProjectGuid>
+    <ProjectGuid>{A1D4342A-F53D-4D9F-8FB8-94CCDEF16367}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsAppPart6</RootNamespace>
-    <AssemblyName>WindowsFormsAppPart6</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <RootNamespace>TestApp</RootNamespace>
+    <AssemblyName>TestApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FakeData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FakeData.1.0.0\lib\FakeData.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,25 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer.cs" />
-    <Compile Include="CustomerInfoPopup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerInfoPopup.Designer.cs">
-      <DependentUpon>CustomerInfoPopup.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataGridViewForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DataGridViewForm.Designer.cs">
-      <DependentUpon>DataGridViewForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FakeDataTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FakeDataTest.Designer.cs">
-      <DependentUpon>FakeDataTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,15 +54,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VirtualDatabase.cs" />
-    <EmbeddedResource Include="CustomerInfoPopup.resx">
-      <DependentUpon>CustomerInfoPopup.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataGridViewForm.resx">
-      <DependentUpon>DataGridViewForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FakeDataTest.resx">
-      <DependentUpon>FakeDataTest.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,9 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,6 +78,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Test.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

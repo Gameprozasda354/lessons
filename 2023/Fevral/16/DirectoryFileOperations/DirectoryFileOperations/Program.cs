@@ -33,7 +33,7 @@ namespace DirectoryFileOperations
             //};
             //AppendMultipleTextsToFile(@"C:\to\salam.txt", countries);
 
-            string[] countries = ReadFileContentByLine(@"C:\to\salam.txt");
+            //string[] countries = ReadFileContentByLine(@"C:\to\salam.txt");
         }
 
         static void CreateNewFolder(string path)
