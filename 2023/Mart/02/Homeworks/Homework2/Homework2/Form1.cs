@@ -38,6 +38,7 @@ namespace Homework2
                         }
                         else
                         {
+                            var test = ErrorMessages.passwordInvalid;
                             throw  new InvalidExpressionException("Password isn't correct");
                         }
                         flag = true;

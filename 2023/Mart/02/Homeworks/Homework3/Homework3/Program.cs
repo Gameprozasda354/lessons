@@ -13,7 +13,7 @@ namespace Homework3
             //Tuple Bize bir cox dataya sahip elementleri saxlamaga komek edir.
             //Tuple-den evvel biz bunu ferqli yollarla ede bilerik.Meselen:
             //Classlar ile ve ya Struct  tiplerle.
-            //Lakin tuplelardan sonra bu isi etemek asanlasir.
+            //Lakin tuplelardan sonra bu isi etemek bezi yerlerde asanlasir.
             //Bir cox data structure typelari sonsuz sayda element saxlaya bilir lakin Tuple limitli sayda element saxlaya bilir.
             //Biz Tuple-i 2 esas yolla yarada bilerik.Birincisi Constructor methodlarla:
 

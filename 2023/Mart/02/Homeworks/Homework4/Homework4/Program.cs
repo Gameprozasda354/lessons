@@ -10,6 +10,7 @@ namespace Homework4
     {
         static void Main(string[] args)
         {
+
             //.NET FrameWork 1.0/1.1(VS 2002/2003):
             //Sade kodlar yazilirdi.
 
@@ -33,8 +34,6 @@ namespace Homework4
 
             //.NET Framework Core 3.X ve Standard 2.1 (VS 2012):
             //Static Local funksiyalar ve Asynchronous streams elave olundu.
-
-
 
         }
     }

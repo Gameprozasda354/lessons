@@ -50,6 +50,8 @@ namespace Homework1
                 ints.Add(d);
 
                 Console.WriteLine(ints[4]);
+
+
             }
             catch(IndexOutOfRangeException)
             {
