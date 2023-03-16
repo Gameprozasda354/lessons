@@ -15,11 +15,10 @@ namespace Homework3
             {
                 numbers[i] = i;
             }
-            List<int> list = new List<int>();
-            list  = numbers.Where(x => x%2==0).ToList();
 
-            List<int> list2 = new List<int>();
-            list2 = numbers.Where(x => x%2!=0 && x>400 && x<=550).ToList();
+            var list  = numbers.Where(x => x%2==0).ToList();
+
+            var list2 = numbers.Where(x => x%2!=0 && x>400 && x<=550).ToList();
 
         }
         /*

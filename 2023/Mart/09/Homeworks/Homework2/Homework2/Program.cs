@@ -97,28 +97,22 @@ namespace Homework2
             carList.Add(car5);
             carList.Add(car6);
 
-            List<Car> carList1 = new List<Car>();
-            carList1 = carList.Where(x => x.Brand == "Mercedes" && x.Engine <= 4200 &&
+            var carList1 = carList.Where(x => x.Brand == "Mercedes" && x.Engine <= 4200 &&
                                           x.City == "Baki").ToList();
 
-            List<Car> carList2 = new List<Car>();
-            carList1 = carList.Where(x => x.City != "Baki" && x.MadeYear >= 2015 &&
+            var carList2 = carList.Where(x => x.City != "Baki" && x.MadeYear >= 2015 &&
                                           x.MadeYear <= 2020).ToList();
 
-            List<Car> carList3 = new List<Car>();
-            carList1 = carList.Where(x => x.Km == 0 && x.Model.Contains("ml")).ToList();
+            var carList3 = carList.Where(x => x.Km == 0 && x.Model.Contains("ml")).ToList();
 
-            List<Car> carList4 = new List<Car>();
-            carList1 = carList.Where(x => x.GearBox == GearBox.Automatic && x.Price > 15000 &&
+            var carList4 = carList.Where(x => x.GearBox == GearBox.Automatic && x.Price > 15000 &&
                                           x.Price < 17500).ToList();
 
-            List<Car> carList5 = new List<Car>();
-            carList1 = carList.Where(x => x.Color != Color.Black && x.Color != Color.Red &&
+            var carList5 = carList.Where(x => x.Color != Color.Black && x.Color != Color.Red &&
                                           x.Engine > 2000 && x.Engine < 4000 && x.MadeYear >= 2010 &&
                                           x.GearBox != GearBox.Robot).ToList();
 
-            List<Car> carList6 = new List<Car>();
-            carList1 = carList.Where(x => (x.Brand == "Lexus" && x.Price <= 30000) || 
+            var carList6 = carList.Where(x => (x.Brand == "Lexus" && x.Price <= 30000) || 
                                           (x.Brand == "Mercedes" && x.Price <= 45000)).ToList();
         }
         /*
