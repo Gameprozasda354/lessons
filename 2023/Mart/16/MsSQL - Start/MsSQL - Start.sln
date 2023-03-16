@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.33026.149
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsSQL - Start", "MsSQL - Start\MsSQL - Start.csproj", "{621DC803-DC2A-4413-B729-DF580F290575}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework", "Homework\Homework.csproj", "{8E03B4AB-2BB3-4FD3-B748-8AFC08CEF3E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{621DC803-DC2A-4413-B729-DF580F290575}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{621DC803-DC2A-4413-B729-DF580F290575}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{621DC803-DC2A-4413-B729-DF580F290575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E03B4AB-2BB3-4FD3-B748-8AFC08CEF3E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E03B4AB-2BB3-4FD3-B748-8AFC08CEF3E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E03B4AB-2BB3-4FD3-B748-8AFC08CEF3E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E03B4AB-2BB3-4FD3-B748-8AFC08CEF3E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
