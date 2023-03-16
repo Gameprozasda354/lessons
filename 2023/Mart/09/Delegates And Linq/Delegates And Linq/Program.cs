@@ -43,6 +43,7 @@ namespace Delegates_And_Linq
             delegateCalc += Multiplication;
             delegateCalc += Division;
             delegateCalc.Invoke(10, 20);
+            
 
             int OtherMethod(bool a)
             {
