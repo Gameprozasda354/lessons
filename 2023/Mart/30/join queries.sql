@@ -1,3 +1,4 @@
+use AdventureWorks2017
 /*
 Customers (table)
 Id
