@@ -11,6 +11,9 @@ ON PP.rowguid = PE.rowguid
 select * from Person.Person PP RIGHT JOIN Person.BusinessEntity PB
 ON PP.BusinessEntityID = PB.BusinessEntityID
 
+select * from Production.Product PP LEFT JOIN  Production.ProductModel PM
+ON PP.ProductModelID = PM.ProductModelID
+
 select * from Production.Product PP FULL JOIN  Production.ProductModel PM
 ON PP.ProductModelID = PM.ProductModelID
 
@@ -28,7 +31,7 @@ create table Personals
 	Id int IDENTITY NOT NULL PRIMARY KEY,
 	Name nvarchar(50) NOT NULL,
 	Surname nvarchar(50) NOT NULL,
-	Email nvarchar(250) NOT NULL,
+	Email nvarchar(250) NOT NULL UNIQUE,
 	Gender char,
 	CreatedDate date Default GetDate() NOT NULL,
 	Updateddate date,
@@ -71,7 +74,7 @@ PP.BusinessEntityId = HRE.BusinessEntityId
 --inner join HumanResources.Employee HRE on
 --PP.BusinessEntityId = HRE.BusinessEntityId
 
-select FirstName Name, LastName SurName, Email = Lower(FirstName) + '.' + Lower(LastName) + '@gmail.com', 
+select PP.BusinessEntityID Id, FirstName Name, LastName SurName, Email = Lower(FirstName) + '.' + Lower(LastName) + '@gmail.com', 
 Gender, ModifiedDate = GetDate() from Person.Person as PP
 inner join HumanResources.Employee HRE on
 PP.BusinessEntityId = HRE.BusinessEntityId
@@ -90,10 +93,11 @@ PP.BusinessEntityId = HRE.BusinessEntityId
 
 CREATE PROCEDURE spAddPersonal
 
-	@Name nvarchar(50),
+	(@Name nvarchar(50),
 	@SurName nvarchar(50),
 	@Email nvarchar(250),
-	@Gender char
+	@Gender char)
+with encryption
 As
 Begin
 	Insert Into Personals(Name, Surname, Email, Gender)
@@ -103,6 +107,28 @@ End
 Go
  
 
+CREATE PROCEDURE spRemovePersonal
+	@Id int
+
+As
+Begin
+	 Delete Personals  where Id = @Id
+End
+Go
+
+
+ CREATE PROCEDURE spEditPersonal
+	(@Id int,
+	@Name nvarchar(50),
+	@SurName nvarchar(50),
+	@Email nvarchar(250),
+	@Gender char)
+
+As
+Begin
+	Update Personals set Name = @Name, Surname = @SurName, Email = @Email, Gender = @Gender where Id = @Id
+End
+Go
 
 CREATE PROCEDURE spGetAllPersonals
 	
@@ -128,6 +154,6 @@ CREATE PROCEDURE spSearchPersonalByEmail
 	@Email nvarchar(250)
 As
 Begin
-	select * from Personals where Email = @Email
+	select * from Personals where Email  = @Email
 End
 Go
