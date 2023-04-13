@@ -29,21 +29,24 @@ C#'da bildiyiniz bütün data tiplərin SQL'dəki qarşılığını tapın. Bir 
 olan qarşılığından istifadə edərək praktika edin. İnsertlərini də yazın mütləq.
 */
 
+drop table DataTypes
+
 create table DataTypes
 (
-	Bool nvarchar(20),
-	Int16 nvarchar(20),
-	Int32 nvarchar(20),
-	Int64 nvarchar(20),
+	Bool bit,
+	Int16 smallint,
+	Int32 int,
+	Int64 bigint,
 	String nvarchar(20),
-	Decimal1 nvarchar(20),
-	Float1 nvarchar(20),
-	Char1 nvarchar(20),
-	DateTime1 nvarchar(20)
+	Decimal1 decimal,
+	Float1 float,
+	Char1 char,
+	DateTime1 datetime
 
 )
 
 insert into DataTypes(Bool, Int16, Int32, Int64, String, Decimal1, Float1, Char1, DateTime1)
-Values ('bit', 'smallint', 'int', 'bigint', 'nvarchar', 'decimal', 'float', 'char', 'datetime')
+Values (0, 365, 6473576, 623652426546354, 'Baki', 6.243, 8.0975, 'H', GETDATE())
 
 
+select * from DataTypes
