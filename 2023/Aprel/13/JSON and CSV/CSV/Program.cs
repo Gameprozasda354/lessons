@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -39,7 +40,7 @@ namespace CSV
 
             StreamWriter sw = new StreamWriter(@"C:\\CSV\\Customers.csv");
 
-            CsvHelper.CsvWriter write = new CsvHelper.CsvWriter(sw);
+            CsvHelper.CsvWriter write = new CsvHelper.CsvWriter(sw, CultureInfo.InvariantCulture);
 
             write.WriteHeader(typeof(Customer));
 
@@ -53,9 +54,9 @@ namespace CSV
 
 
 
-            StreamReader sr = new StreamReader(@"C:\\CSV\\Customers.csv");
+            var sr = new StreamReader(@"C:\\CSV\\Customers.csv");
 
-            CsvHelper.CsvReader reader = new CsvHelper.CsvReader(sr);
+            CsvHelper.CsvReader reader = new CsvHelper.CsvReader(sr, CultureInfo.InvariantCulture);
 
             List<Customer> readCustomers = reader.GetRecords<Customer>().ToList();
             #endregion
