@@ -20,7 +20,7 @@ namespace EduSys.Repository.Seeds
                     Id = 1,
                     CategoryId = 1,
                     Name = "Computer",
-                    Price = 800,
+                    Price = 800m,
                     Stock = 35,
                     CreatedDate = DateTime.Now
                 },
@@ -29,7 +29,7 @@ namespace EduSys.Repository.Seeds
                     Id = 2,
                     CategoryId = 2,
                     Name = "T-Shirt",
-                    Price = 50,
+                    Price = 50m,
                     Stock = 400,
                     CreatedDate = DateTime.Now
                 },
@@ -38,7 +38,7 @@ namespace EduSys.Repository.Seeds
                     Id = 3,
                     CategoryId = 3,
                     Name = "Cat food",
-                    Price = 25,
+                    Price = 25m,
                     Stock = 1000,
                     CreatedDate = DateTime.Now
                 }

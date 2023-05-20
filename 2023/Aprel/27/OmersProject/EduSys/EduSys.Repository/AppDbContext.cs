@@ -45,11 +45,11 @@ namespace EduSys.Repository
                 {
                     Id = 3,
                     Color = "Red",
-                    Height = 30,
-                    Width = 70,
-                    ProductId = 1
-                },
-                )
+                    Height = 80,
+                    Width = 40,
+                    ProductId = 2
+                }
+                );
             base.OnModelCreating(modelBuilder);
         }
 
