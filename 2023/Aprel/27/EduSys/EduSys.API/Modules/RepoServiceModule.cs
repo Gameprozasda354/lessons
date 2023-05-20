@@ -2,6 +2,7 @@
 using EduSys.Core.Repositories;
 using EduSys.Core.Services;
 using EduSys.Core.UnitOfWorks;
+using EduSys.Repository;
 using EduSys.Repository.Repositories;
 using EduSys.Repository.UnitOfWork;
 using EduSys.Service.Mapping;
@@ -17,7 +18,7 @@ namespace EduSys.API.Modules
         {
             var apiAssembly = Assembly.GetExecutingAssembly();
 
-            var repoAssembly = Assembly.GetAssembly(typeof(AppContext));
+            var repoAssembly = Assembly.GetAssembly(typeof(AppDbContext));
 
             var serviceAssembly = Assembly.GetAssembly(typeof(MapProfile));
 
