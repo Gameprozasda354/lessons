@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using EduSys.Caching;
 using EduSys.Core.Repositories;
 using EduSys.Core.Services;
 using EduSys.Core.UnitOfWorks;
@@ -31,6 +32,8 @@ namespace EduSys.API.Modules
                 .Where(x => x.Name.EndsWith("Service"))
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<ProductServiceWithCaching>().As<IProductService>();
 
             builder.RegisterGeneric(typeof(GenericRepository<>))
                 .As(typeof(IGenericRepository<>))
