@@ -33,7 +33,7 @@ namespace EduSys.API.Modules
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<ProductServiceWithCaching>().As<IProductService>();
+            //builder.RegisterType<ProductServiceWithCaching>().As<IProductService>();
 
             builder.RegisterGeneric(typeof(GenericRepository<>))
                 .As(typeof(IGenericRepository<>))
@@ -43,7 +43,24 @@ namespace EduSys.API.Modules
                 .As(typeof(IService<>))
                 .InstancePerLifetimeScope();
 
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
+            builder.RegisterGeneric(typeof(ServiceWithDto<,>))
+                .As(typeof(IServiceWithDto<,>))
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
+
+            builder.RegisterType<ProductServiceWithDto>().As<IProductServiceWithDto>().InstancePerLifetimeScope();
+
+            //152.148.13.4:443 <- web sayt
+            //152.148.13.4:527777 <- API
+
+            //API project
+            //https: 7143
+            //http: 5028
+
+            //Web project
+            //https: 7091
+            //http: 5029
         }
     }
 }

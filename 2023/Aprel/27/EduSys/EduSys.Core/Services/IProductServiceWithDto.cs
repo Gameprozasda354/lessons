@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 
 namespace EduSys.Core.Services
 {
-    public interface IProductService : IService<Product>
+    public interface IProductServiceWithDto : IServiceWithDto<Product, ProductDto>
     {
         Task<CustomResponseDto<List<ProductWithCategoryDto>>> GetProductsWithCategory();
+
+        Task<CustomResponseDto<NoContentDto>> UpdateAsync(ProductUpdateDto dto);
+
+        Task<CustomResponseDto<ProductDto>> AddAsync(ProductCreateDto dto);
     }
 }
