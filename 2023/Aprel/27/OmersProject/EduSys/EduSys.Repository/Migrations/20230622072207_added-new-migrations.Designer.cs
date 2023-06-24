@@ -4,6 +4,7 @@ using EduSys.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EduSys.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230622072207_added-new-migrations")]
+    partial class addednewmigrations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -209,7 +211,7 @@ namespace EduSys.Repository.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            CreatedDate = new DateTime(2023, 6, 22, 12, 35, 19, 314, DateTimeKind.Local).AddTicks(9936),
+                            CreatedDate = new DateTime(2023, 6, 22, 11, 22, 7, 351, DateTimeKind.Local).AddTicks(4147),
                             Name = "Computer",
                             Price = 800m,
                             Stock = 35
@@ -218,7 +220,7 @@ namespace EduSys.Repository.Migrations
                         {
                             Id = 2,
                             CategoryId = 2,
-                            CreatedDate = new DateTime(2023, 6, 22, 12, 35, 19, 314, DateTimeKind.Local).AddTicks(9945),
+                            CreatedDate = new DateTime(2023, 6, 22, 11, 22, 7, 351, DateTimeKind.Local).AddTicks(4154),
                             Name = "T-Shirt",
                             Price = 50m,
                             Stock = 400
@@ -227,7 +229,7 @@ namespace EduSys.Repository.Migrations
                         {
                             Id = 3,
                             CategoryId = 3,
-                            CreatedDate = new DateTime(2023, 6, 22, 12, 35, 19, 314, DateTimeKind.Local).AddTicks(9946),
+                            CreatedDate = new DateTime(2023, 6, 22, 11, 22, 7, 351, DateTimeKind.Local).AddTicks(4155),
                             Name = "Cat food",
                             Price = 25m,
                             Stock = 1000
@@ -298,57 +300,6 @@ namespace EduSys.Repository.Migrations
                         });
                 });
 
-            modelBuilder.Entity("EduSys.Core.Models.User", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("CountryId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("EmailAddress")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
-
-                    b.Property<string>("SurName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CountryId")
-                        .IsUnique();
-
-                    b.ToTable("Users", (string)null);
-                });
-
             modelBuilder.Entity("EduSys.Core.Models.City", b =>
                 {
                     b.HasOne("EduSys.Core.Models.Country", "Country")
@@ -382,17 +333,6 @@ namespace EduSys.Repository.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("EduSys.Core.Models.User", b =>
-                {
-                    b.HasOne("EduSys.Core.Models.Country", "Country")
-                        .WithOne("User")
-                        .HasForeignKey("EduSys.Core.Models.User", "CountryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Country");
-                });
-
             modelBuilder.Entity("EduSys.Core.Models.Category", b =>
                 {
                     b.Navigation("Products");
@@ -401,9 +341,6 @@ namespace EduSys.Repository.Migrations
             modelBuilder.Entity("EduSys.Core.Models.Country", b =>
                 {
                     b.Navigation("Cities");
-
-                    b.Navigation("User")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("EduSys.Core.Models.Product", b =>

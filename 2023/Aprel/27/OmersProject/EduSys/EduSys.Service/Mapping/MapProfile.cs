@@ -13,13 +13,16 @@ namespace EduSys.Service.Mapping
     {
         public MapProfile()
         {
-            CreateMap<Product, ProductDto>().ReverseMap();
-            CreateMap<Category, CategoryDto>().ReverseMap();
+            CreateMap<Product,        ProductDto>().ReverseMap();
+            CreateMap<Category,       CategoryDto>().ReverseMap();
             CreateMap<ProductFeature, ProductFeatureDto>().ReverseMap();
-            CreateMap<ProductUpdateDto, Product>().ReverseMap();
-            CreateMap<Product, ProductWithCategoryDto>().ReverseMap();
-            CreateMap<Category, CategoryWithProductsDto>().ReverseMap();
-			CreateMap<ProductCreateDto, Product>().ReverseMap();
+            CreateMap<Product,        ProductUpdateDto > ().ReverseMap();
+            CreateMap<Product,        ProductWithCategoryDto>().ReverseMap();
+            CreateMap<Category,       CategoryWithProductsDto>().ReverseMap();
+			CreateMap<Product,        ProductCreateDto > ().ReverseMap();
+			CreateMap<Country,        CountryDto>().ReverseMap();
+			CreateMap<City,           CityDto>().ReverseMap();
+			CreateMap<User,           UserDto>().ReverseMap();
 		}
     }
 }

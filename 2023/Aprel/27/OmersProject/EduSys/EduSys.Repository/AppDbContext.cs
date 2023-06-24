@@ -12,40 +12,22 @@ namespace EduSys.Repository
 {
     public class AppDbContext : DbContext
     {
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+                
+        }
+
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductFeature> ProductFeatures { get; set; }
+		public DbSet<Country> Countries { get; set; }
+		public DbSet<City> Cities { get; set; }
+		public DbSet<User> Users { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-            modelBuilder.Entity<ProductFeature>().HasData(
-                new ProductFeature
-                {
-                    Id = 1,
-                    Color = "Red",
-                    Height = 30,
-                    Width = 70,
-                    ProductId = 1
-                },
-                new ProductFeature
-                {
-                    Id = 2,
-                    Color = "Red",
-                    Height = 20,
-                    Width = 25,
-                    ProductId = 3
-                },
-                new ProductFeature
-                {
-                    Id = 3,
-                    Color = "Red",
-                    Height = 80,
-                    Width = 40,
-                    ProductId = 2
-                }
-                );
             base.OnModelCreating(modelBuilder);
         }
 
