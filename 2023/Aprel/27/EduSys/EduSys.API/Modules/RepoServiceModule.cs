@@ -51,16 +51,11 @@ namespace EduSys.API.Modules
 
             builder.RegisterType<ProductServiceWithDto>().As<IProductServiceWithDto>().InstancePerLifetimeScope();
 
-            //152.148.13.4:443 <- web sayt
-            //152.148.13.4:527777 <- API
+            builder.RegisterType<UserServiceWithDto>().As<IUserServiceWithDto>().InstancePerLifetimeScope();
 
-            //API project
-            //https: 7143
-            //http: 5028
+            builder.RegisterType<LoginServiceWithDto>().As<ILoginServiceWithDto>().InstancePerLifetimeScope();
 
-            //Web project
-            //https: 7091
-            //http: 5029
+            builder.RegisterType<RegistrationServiceWithDto>().As<IRegistrationServiceWithDto>().InstancePerLifetimeScope();
         }
     }
 }
