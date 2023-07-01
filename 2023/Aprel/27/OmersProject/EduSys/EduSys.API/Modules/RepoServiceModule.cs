@@ -51,6 +51,12 @@ namespace EduSys.API.Modules
 
 			builder.RegisterType<ProductServiceWithDto>().As<IProductServiceWithDto>().InstancePerLifetimeScope();
 
+			builder.RegisterType<UserServiceWithDto>().As<IUserServiceWithDto>().InstancePerLifetimeScope();
+
+			builder.RegisterType<LoginServiceWithDto>().As<ILoginServiceWithDto>().InstancePerLifetimeScope();
+
+			builder.RegisterType<RegistrationServiceWithDto>().As<IRegistrationServiceWithDto>().InstancePerLifetimeScope();
+
 			//Api project
 			//https:7212
 			//http:5212

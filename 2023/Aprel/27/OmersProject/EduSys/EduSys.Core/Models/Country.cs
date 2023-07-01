@@ -10,7 +10,7 @@ namespace EduSys.Core.Models
 	{
         public string Name { get; set; }
 		public string ShortName { get; set; }
-		public List<City> Cities { get; set; }
-		public User User { get; set; }
+		public ICollection<City> Cities { get; set; }
+		public ICollection<User> User { get; set; }
 	}
 }

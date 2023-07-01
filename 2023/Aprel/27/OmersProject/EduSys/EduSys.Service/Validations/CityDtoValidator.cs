@@ -13,6 +13,10 @@ namespace EduSys.Service.Validations
 		public CityDtoValidator()
 		{
 			RuleFor(x => x.Name)
+				.MinimumLength(2)
+				.WithMessage("{PropertyName} is min length is 2 charachter!")
+				.MaximumLength(200)
+				.WithMessage("{PropertyName} is max length is 200 charachter!")
 				.NotNull()
 				.WithMessage("{PropertyName} is required")
 				.NotEmpty()

@@ -24,7 +24,7 @@ namespace EduSys.Repository.Configurations
 			builder.Property(x => x.CountryId).IsRequired();
 			builder.ToTable("Users");
 
-			builder.HasOne(x => x.Country).WithOne(x => x.User).HasForeignKey<User>(x => x.CountryId);
+			builder.HasOne(x => x.Country).WithMany(x => x.User).HasForeignKey(x => x.CountryId);
 		}
 	}
 }

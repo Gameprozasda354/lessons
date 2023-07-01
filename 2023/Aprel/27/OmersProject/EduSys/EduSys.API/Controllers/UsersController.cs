@@ -9,17 +9,11 @@ namespace EduSys.API.Controllers
 {
 	public class UsersController : CustomBaseController
 	{
-		private readonly IServiceWithDto<User, UserDto> _userService;
+		private readonly IUserServiceWithDto _userService;
 
-		public UsersController(IServiceWithDto<User, UserDto> userService)
+		public UsersController(IUserServiceWithDto userService)
 		{
 			_userService = userService;
-		}
-
-		[HttpGet]
-		public async Task<IActionResult> All()
-		{
-			return CreateActionResult(await _userService.GetAllAsync());
 		}
 
 		[ServiceFilter(typeof(NotFoundFilter<User>))]
@@ -27,12 +21,6 @@ namespace EduSys.API.Controllers
 		public async Task<IActionResult> GetById(int id)
 		{
 			return CreateActionResult(await _userService.GetByIdAsync(id));
-		}
-
-		[HttpPost]
-		public async Task<IActionResult> Save(UserDto user)
-		{
-			return CreateActionResult(await _userService.AddAsync(user));
 		}
 
 		[HttpPut]
@@ -45,18 +33,6 @@ namespace EduSys.API.Controllers
 		public async Task<IActionResult> Remove(int id)
 		{
 			return CreateActionResult(await _userService.RemoveAsync(id));
-		}
-
-		[HttpPost("SaveAll")]
-		public async Task<IActionResult> Save(List<UserDto> usersDtos)
-		{
-			return CreateActionResult(await _userService.AddRangeAsync(usersDtos));
-		}
-
-		[HttpDelete("RemoveAll")]
-		public async Task<IActionResult> RemoveAll(List<int> id)
-		{
-			return CreateActionResult(await _userService.RemoveRangeAsync(id));
 		}
 
 		[HttpGet("Any/{id}")]
