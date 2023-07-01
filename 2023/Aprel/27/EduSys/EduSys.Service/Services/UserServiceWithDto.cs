@@ -15,12 +15,10 @@ namespace EduSys.Service.Services
 {
     public class UserServiceWithDto : ServiceWithDto<User, UserDto>, IUserServiceWithDto
     {
-        private readonly IUserServiceWithDto _userRepository;
-
-        public UserServiceWithDto(IGenericRepository<User> repository, IUnitOfWork unitOfWork, IMapper mapper, IUserServiceWithDto userRepository)
+        public UserServiceWithDto(IGenericRepository<User> repository, IUnitOfWork unitOfWork, IMapper mapper)
             : base(repository, unitOfWork, mapper)
         {
-            _userRepository = userRepository;
+
         }
     }
 }

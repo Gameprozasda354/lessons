@@ -1,11 +1,12 @@
 ﻿using AutoMapper;
 using EduSys.Core.DTOs;
-using EduSys.Core.Helpers;
+using EduSys.Common.Helpers;
 using EduSys.Core.Models;
 using EduSys.Core.Repositories;
 using EduSys.Core.Services;
 using EduSys.Core.UnitOfWorks;
 using EduSys.Repository.Repositories;
+using EduSys.Service.Exceptions;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,11 @@ namespace EduSys.Service.Services
             user.Password = UserHelper.HashPassword(user.Password);
 
             var newEntity = _mapper.Map<User>(user);
+
+            var isEmailDuplicate = await _registrationRepository.AnyAsync(m => m.EmailAddress.ToLower() == user.EmailAddress.ToLower() && m.IsActive);
+
+            if (isEmailDuplicate)
+                throw new ClientSideException("Email address is duplicate!");
 
             await _registrationRepository.AddAsync(newEntity);
 

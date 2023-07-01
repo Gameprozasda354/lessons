@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduSys.Repository", "EduSys
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduSys.Service", "EduSys.Service\EduSys.Service.csproj", "{C7E8FD2D-C821-4821-B0FD-589FAAA1584D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduSys.API", "EduSys.API\EduSys.API.csproj", "{28754B63-5B5F-44FC-AC7B-148AE4D541DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduSys.API", "EduSys.API\EduSys.API.csproj", "{28754B63-5B5F-44FC-AC7B-148AE4D541DA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduSys.Caching", "EduSys.Caching\EduSys.Caching.csproj", "{169AE27E-713F-485C-8E92-54051685BF34}"
 EndProject
@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		Ports.txt = Ports.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduSys.Common", "EduSys.Common\EduSys.Common.csproj", "{B249A77C-DAB1-4CA9-8433-91109D8CCD9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{62714E46-2FB4-4E96-ADE7-EDF4047DF9CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62714E46-2FB4-4E96-ADE7-EDF4047DF9CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62714E46-2FB4-4E96-ADE7-EDF4047DF9CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B249A77C-DAB1-4CA9-8433-91109D8CCD9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B249A77C-DAB1-4CA9-8433-91109D8CCD9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B249A77C-DAB1-4CA9-8433-91109D8CCD9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B249A77C-DAB1-4CA9-8433-91109D8CCD9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

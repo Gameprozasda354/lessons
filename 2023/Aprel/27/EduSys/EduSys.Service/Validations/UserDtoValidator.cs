@@ -33,8 +33,8 @@ namespace EduSys.Service.Validations
                 .WithMessage("{PropertyName} is required");
 
             RuleFor(x => x.DateOfBirth)
-                .ExclusiveBetween(new DateTime(1950, 01, 01), DateTime.Now)
-                .WithMessage("{PropertyName} range must be 1950-Now");
+                .ExclusiveBetween(DateTime.Now.AddYears(-100), DateTime.Now.AddYears(-18))
+                .WithMessage("You must be minimal 18 and maximal 100 years old!");
 
             RuleFor(x => x.EmailAddress)
                 .MinimumLength(5)

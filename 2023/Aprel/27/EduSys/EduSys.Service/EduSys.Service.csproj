@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EduSys.Common\EduSys.Common.csproj" />
     <ProjectReference Include="..\EduSys.Repository\EduSys.Repository.csproj" />
   </ItemGroup>
 

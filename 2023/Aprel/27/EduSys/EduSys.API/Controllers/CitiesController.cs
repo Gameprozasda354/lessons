@@ -1,6 +1,6 @@
 ﻿using EduSys.API.Filters;
 using EduSys.Core.DTOs;
-using EduSys.Core.Helpers;
+using EduSys.Common.Helpers;
 using EduSys.Core.Models;
 using EduSys.Core.Services;
 using Microsoft.AspNetCore.Http;

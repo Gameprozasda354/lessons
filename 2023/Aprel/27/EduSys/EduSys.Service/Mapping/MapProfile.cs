@@ -23,6 +23,7 @@ namespace EduSys.Service.Mapping
             CreateMap<Country,        CountryDto>().ReverseMap();
             CreateMap<City,           CityDto>().ReverseMap();
             CreateMap<User,           UserDto>().ReverseMap();
+            CreateMap<User,           LoginDto>().ReverseMap();
         }
     }
 }

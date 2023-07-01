@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EduSys.Core.Helpers
+namespace EduSys.Common.Helpers
 {
     public static class HashHelper
     {

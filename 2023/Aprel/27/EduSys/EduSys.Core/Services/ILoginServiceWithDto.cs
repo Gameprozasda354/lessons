@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace EduSys.Core.Services
 {
-    public interface ILoginServiceWithDto : IServiceWithDto<User, UserDto>
+    public interface ILoginServiceWithDto : IServiceWithDto<User, LoginDto>
     {
-
+        Task<CustomResponseDto<bool>> Login(LoginDto loginInfo);
     }
 }

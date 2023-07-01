@@ -1,4 +1,5 @@
-﻿using EduSys.Core.Services;
+﻿using EduSys.Core.DTOs;
+using EduSys.Core.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,6 +12,12 @@ namespace EduSys.API.Controllers
         public LoginController(ILoginServiceWithDto loginService)
         {
             _loginService = loginService;
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginDto loginInfo)
+        {
+            return CreateActionResult(await _loginService.Login(loginInfo));
         }
     }
 }
